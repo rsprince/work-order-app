@@ -1,0 +1,73 @@
+mat-toolbar {
+    height: 60px;
+    background: #0F3852;
+    color: white;
+}
+.site-name {
+    margin-right: 50px;
+}
+ 
+[mat-button] {
+    margin-top: 3px;
+}
+ 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+ 
+mat-sidenav {
+    width: 160px;
+}
+ 
+.chrome-container {
+    position: relative;
+    padding-top: 20px;
+}
+.rail-container {
+    min-height: 100vh;
+    height: 100%;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    left: 0px; //-70px
+    color: white;
+    background:#0F3852;
+    padding-top: 16px;
+    display: flex;
+    flex-flow: column;
+    align-items: left;
+    font-size: 12px;
+ 
+    button {
+        padding-bottom: 18px;
+    }
+ 
+    .mat-list-item {
+        color: white;
+      }
+   
+      .nav-label {
+        padding-left: 10px;
+      }
+ 
+}
+ 
+
+.main-container {
+    position: relative;
+    height: 100%;
+    margin: 20px 0 0 150px;
+}
+ 
+.no-v-scroll {
+   height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.back-icon {
+    cursor: pointer;
+}
+ 

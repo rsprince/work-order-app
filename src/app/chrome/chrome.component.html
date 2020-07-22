@@ -1,0 +1,53 @@
+<!-- Header -->
+<mat-toolbar class="flex-wrapper">
+	<span class="site-name flex-wrapper">
+		<span
+			*ngIf="screenTitle != 'Home'"
+			class="material-icons back-icon"
+			(click)="backBtn()">
+			arrow_back_ios
+		</span>
+		<span>
+			{{ screenTitle }}
+		</span>
+	</span>
+</mat-toolbar>
+<div class="chrome-container">
+	<div
+		class="main-container"
+		[@onMainContentChange]="sideNavState ? 'open': 'close'">
+    <router-outlet></router-outlet>
+  </div>
+ 
+	<!-- Side Bar Nav -->
+	<div
+		class="rail-container" 
+		[@onSideNavChange]="sideNavState ? 'open' : 'close'"
+		(click)="onSidenavToggle()">
+			<div fxLayout="column" fxLayoutGap="10px" style="height: 100%;">
+				<div>
+					<mat-nav-list>
+						<div *ngFor="let link of navLinks">
+							<a mat-list-item href="{{ link.path }}">
+								<mat-icon aria-hidden="false" aria-label="}">
+									{{ link.icon }}
+								</mat-icon>               
+								<span class="nav-label" [@animateText]="linkText ? 'show' : 'hide'">
+									{{ link.name }}
+								</span>
+							</a>
+						</div>
+					</mat-nav-list>
+				</div>
+			</div>
+ 
+  	<span class="spacer"></span>
+		<div fxLayout="row" fxLayoutAlign="end center" style="padding: 0px 10px;">
+				<!-- <button mat-icon-button (click)="onSidenavToggle()">
+						<mat-icon *ngIf="sideNavState">arrow_left</mat-icon>
+						<mat-icon *ngIf="!sideNavState">arrow_right</mat-icon>
+				</button> -->
+		</div>
+	</div>
+
+</div>

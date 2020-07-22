@@ -1,0 +1,142 @@
+// @import './material-theme';
+@import './variables';
+@import './mixins'; 
+
+html, body {
+    min-height: 101%;
+    width: 100%;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flex-container {
+    margin-top: 60px;
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: flex-start; //space-around
+}
+
+ 
+.flex-item {
+    margin: 10px 4px;
+
+    width: 200px;
+
+    height: 150px;
+
+    color: white;
+
+    text-align: center;
+
+};
+
+ 
+
+request-tiles-container {
+
+    position: absolute;
+
+    top: -75px;
+
+    width: 87%;
+
+    left: 100px;
+
+}
+
+ 
+
+h1 {
+
+    font-size: 48px;
+
+}
+
+ 
+
+.flex-wrapper {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+}
+
+/* These will work inside a flex container
+
+ with more than one span (see above). */
+
+ .float-left {
+
+    margin-right: auto;
+
+    position: relative;
+
+}
+
+.float-right {
+
+    margin-left: auto;
+
+    position: relative;
+
+}
+
+ 
+
+.search-icon {
+
+    position: absolute;
+
+    left: 0px;
+
+    bottom: 12px;
+
+}
+
+ 
+
+.search-clear-icon {
+
+    position: absolute;
+
+    right: 0px;
+
+    bottom: 16px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+ 
+
+.mat-header-row {
+
+    background: $vbm-primary;
+
+    height: 30px !important;
+
+ 
+
+    th {
+
+        color: white;
+
+    }
+   
+
+}
+
+ 
+
+::ng-deep td.mat-cell {
+
+    padding: 6px;
+
+    font-size: 12px;
+
+}
