@@ -23,7 +23,8 @@
 	<div
 		class="rail-container" 
 		[@onSideNavChange]="sideNavState ? 'open' : 'close'"
-		(click)="onSidenavToggle()">
+		(mouseover)="onSidenavToggle($event)"
+		(mouseout)="onMouseOut()">
 			<div fxLayout="column" fxLayoutGap="10px" style="height: 100%;">
 				<div>
 					<mat-nav-list>

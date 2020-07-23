@@ -36,11 +36,19 @@ export class ChromeComponent implements OnInit {
     window.history.back();
   }
  
-  onSidenavToggle() {
+  onSidenavToggle(event) {
     this.sideNavState = !this.sideNavState;
     setTimeout(() => {
       this.linkText = this.sideNavState;
-    }, 200)
+    }, 500)
+    event.preventDefault(); // prevents bubbling down, stopPropagation() prevents bubbling up
+  }
+
+  onMouseOut() {
+    this.sideNavState = !this.sideNavState;
+    setTimeout(() => {
+      this.linkText = this.sideNavState;
+    }, 500) 
   }
  
 

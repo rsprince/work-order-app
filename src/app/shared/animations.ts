@@ -70,7 +70,7 @@ import {
       })
     ),
     transition('close => open', animate('3s ease-out')),
-    transition('open => close', animate('1s ease-out')),
+    transition('open => close', animate('0s ease-out')),
   ]);
  
   export const onMainContentChange = trigger('onMainContentChange', [

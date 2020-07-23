@@ -11,6 +11,7 @@ import { TestComponent } from './test/test.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RequestsModule } from './requests/requests.module';
+import { AssetsModule } from './assets/assets.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RequestsModule } from './requests/requests.module';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RequestsModule
+    RequestsModule,
+    AssetsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
