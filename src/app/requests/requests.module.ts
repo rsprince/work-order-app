@@ -6,13 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 // import { NewRequestComponent } from './new-request/new-request.component';
 import { AutoChipComponent } from '../shared/auto-chip/auto-chip.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewRequestComponent } from './new-request/new-request.component';
  
 
 @NgModule({
   declarations: [
     RequestsListComponent,
     // NewRequestComponent,
-    AutoChipComponent
+    AutoChipComponent,
+    NewRequestComponent
   ],
   imports: [
     CommonModule,
